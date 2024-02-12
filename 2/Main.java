@@ -8,5 +8,6 @@ public class Main {
     System.out.println("enter the data:");
     a = scan.nextLine();
     System.out.println("you entered :" + a);
+    scan.close();
   }
 }
