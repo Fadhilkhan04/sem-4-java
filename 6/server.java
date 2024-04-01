@@ -10,7 +10,7 @@ class server {
       BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
       str = br.readLine();
       Runtime r = Runtime.getRuntime();
-      Process p = r.exec(args);
+      Process p = r.exec(str);
       server.close();
     } catch (IOException e) {
       System.out.println("Error");
