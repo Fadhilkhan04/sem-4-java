@@ -13,7 +13,7 @@ public class client {
       dataOutputStream = new DataOutputStream(socket.getOutputStream());
       System.out.println("sending the file to the server");
 
-      sendFile("./test.txt");
+      sendFile("./car2.jpg");
 
       dataInputStream.close();
       dataOutputStream.close();
@@ -25,7 +25,7 @@ public class client {
   private static void sendFile(String path) throws Exception {
     int bytes = 0;
 
-    File file = new File("./test.txt");
+    File file = new File("./car2.jpg");
     FileInputStream fileInputStream = new FileInputStream(file);
 
     dataOutputStream.writeLong(file.length());
