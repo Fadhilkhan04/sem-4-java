@@ -29,12 +29,6 @@ class HammingCode {
     for (int i = 1; i < ar.length; i++) {
       if ((Math.ceil(Math.log(i) / Math.log(2))
           - Math.floor(Math.log(i) / Math.log(2))) == 0) {
-        // if i == 2^n for n in (0, 1, 2, )
-        // then ar[i]=0
-        //
-        // codeword[i] = 0 ----
-        // redundant bits are initialized
-        // with value 0
         ar[i] = 0;
       } else {
         // codeword[i] = dataword[j];
