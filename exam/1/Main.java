@@ -16,5 +16,8 @@ public class Main {
 
     String ipAddress = "127.0.0.1";
     sendPingRequest(ipAddress);
+    ipAddress = "104.244.42.129";
+    sendPingRequest(ipAddress);
+
   }
 }
