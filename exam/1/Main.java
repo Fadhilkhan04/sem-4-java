@@ -18,6 +18,8 @@ public class Main {
     sendPingRequest(ipAddress);
     ipAddress = "104.244.42.129";
     sendPingRequest(ipAddress);
+    ipAddress = "52.71.87.55";
+    sendPingRequest(ipAddress);
 
   }
 }
