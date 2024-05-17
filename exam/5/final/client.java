@@ -18,9 +18,9 @@ public class client {
 
   private static void sendFile(String path) throws Exception {
     int bytes;
-    File f = new File("./test1.txt");
-    FileInputStream fis = new FileInputStream(f);
-    int size = (int) f.length();
+    // File f = new File("./test1.txt");
+    FileInputStream fis = new FileInputStream(path);
+    int size = (int) path.length();
     dout.writeLong(size);
     byte[] buffer = new byte[4 * 1024];
 
