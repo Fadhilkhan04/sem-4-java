@@ -20,18 +20,18 @@ public class server {
   }
 
   public static void receiveFile(String fileName) throws Exception {
-    int bytes = 0;
-    FileOutputStream fileOutputStream = new FileOutputStream(fileName);
+    int bytes;
+    FileOutputStream fis = new FileOutputStream(fileName);
     long size = din.readLong();
     byte[] buffer = new byte[4 * 1024];
 
-    while (size > 0 && (bytes = din.read(buffer, 0, (int) Math.min(buffer.length, size))) != -1) {
-
-      fileOutputStream.write(buffer, 0, bytes);
+    do {
+      bytes = din.read(buffer, 0, (int) Math.min(buffer.length, size));
+      fis.write(buffer, 0, bytes);
       size -= bytes;
-    }
+    } while (size > 0 && bytes != -1);
     // read file size
     System.out.println("file is received");
-    fileOutputStream.close();
+    fis.close();
   }
 }

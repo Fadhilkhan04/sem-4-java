@@ -1,5 +1,6 @@
 import java.net.*;
 import java.io.*;
+import java.util.*;
 
 public class client {
 
@@ -9,9 +10,10 @@ public class client {
       Socket s = new Socket("localhost", 6666);
       // PrintStream ps = new PrintStream(s.getOutputStream());
       DataOutputStream dout = new DataOutputStream(s.getOutputStream());
-      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      Scanner a = new Scanner(System.in);
       System.out.println("enter command");
-      str = br.readLine();
+      str = a.nextLine();
       dout.writeUTF(str);
       // ps.println(str);
       s.close();
