@@ -9,8 +9,10 @@ public class server {
       String str;
       ServerSocket ss = new ServerSocket(6666);
       Socket s = ss.accept();
-      BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
-      str = br.readLine();
+      DataInputStream din = new DataInputStream(s.getInputStream());
+      // BufferedReader br = new BufferedReader(new
+      // InputStreamReader(s.getInputStream()));
+      str = din.readUTF();
       Runtime r = Runtime.getRuntime();
       Process p = r.exec(str);
       ss.close();
