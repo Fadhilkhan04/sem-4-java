@@ -13,7 +13,7 @@ public class server {
       System.out.println("connected");
       dataInputStream = new DataInputStream(clientSocket.getInputStream());
       dataOutputStream = new DataOutputStream(clientSocket.getOutputStream());
-      receiveFile("./receive.jpg");
+      receiveFile("./test.jpg");
       dataInputStream.close();
       dataOutputStream.close();
       clientSocket.close();
